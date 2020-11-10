@@ -17,8 +17,16 @@ namespace Tareaprogramacion.Controllers
         {
             _logger = logger;
         }
+        public IActionResult Confirmacion(){
+            return View();
+        }
 
-        public IActionResult Index()
+        [HttpPost]
+        public IActionResult Almacenar(Producto producto){
+            
+            return RedirectToAction("Confirmacion");
+        }
+        public IActionResult Index  ()
         {
             return View();
         }
